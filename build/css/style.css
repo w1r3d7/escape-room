@@ -368,7 +368,6 @@ body {
   color: white;
   font-size: 14px;
   line-height: auto;
-  letter-spacing: 0.03em;
   font-weight: 600; }
 
 img {
@@ -387,6 +386,19 @@ a {
     .container {
       padding-left: 16px;
       padding-right: 16px; } }
+
+.btn {
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0;
+  width: 250px;
+  min-height: 65px;
+  border: none;
+  border-radius: 65px;
+  background-color: #f2890f;
+  color: #ffffff; }
 
 .scroll-lock {
   position: fixed;
@@ -417,16 +429,26 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.main-page__header {
+  margin-bottom: 104px; }
+
+.main-page__main {
+  margin-left: 10%; }
+
 .header {
   padding-top: 24px; }
 
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  font-size: 14px;
+  line-height: 117%;
+  font-weight: 600;
+  letter-spacing: 0.03em; }
 
 .main-nav__logo {
-  margin-right: 19%; }
+  margin-right: 11%; }
 
 .main-nav__link-list {
   list-style: none;
@@ -435,15 +457,16 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 17px; }
+  margin-left: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 17px;
+  width: 41%; }
 
-.main-nav__link-item {
-  margin-right: 49px; }
-  .main-nav__link-item:last-child {
-    margin-right: 0; }
-  .main-nav__link-item a {
-    text-transform: uppercase;
-    color: #f0f0f0; }
+.main-nav__link-item a {
+  text-transform: uppercase;
+  color: #f0f0f0; }
 
 .main-nav__contacts {
   display: -webkit-box;
@@ -455,12 +478,12 @@ input[type="radio"].visually-hidden {
 
 .main-nav__contacts-phone {
   color: #f0f0f0;
-  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
-          font-feature-settings: 'pnum' on, 'lnum' on; }
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on; }
 
 .main-nav__contacts-city {
   position: relative;
-  margin-right: 23px;
+  margin-right: 25px;
   padding-left: 24px;
   color: #f2890f;
   font-weight: 700;
@@ -476,3 +499,21 @@ input[type="radio"].visually-hidden {
     width: 16px;
     height: 21px;
     background-image: url("../img/pointer.svg"); }
+
+.main__title {
+  margin: 0;
+  margin-bottom: 30px;
+  width: 44%;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: auto;
+  color: #ffffff; }
+
+.main__about {
+  margin: 0;
+  margin-bottom: 68px;
+  width: 38%;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0; }

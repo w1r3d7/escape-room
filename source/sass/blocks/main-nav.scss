@@ -1,25 +1,24 @@
 .main-nav {
   display: flex;
+
+  @include nav-header-desktop;
 }
 
 .main-nav__logo {
-  margin-right: 19%;
+  margin-right: 11%;
 }
 
 .main-nav__link-list {
   @include ul-reset();
 
   display: flex;
+  margin-left: auto;
+  justify-content: space-between;
   padding-top: 17px;
+  width: 41%;
 }
 
 .main-nav__link-item {
-  margin-right: 49px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
   a {
     text-transform: uppercase;
     color: $light-gray;
@@ -35,12 +34,12 @@
 
 .main-nav__contacts-phone {
   color: $light-gray;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .main-nav__contacts-city {
   position: relative;
-  margin-right: 23px;
+  margin-right: 25px;
   padding-left: 24px;
   color: $orange;
   font-weight: 700;
@@ -59,5 +58,3 @@
     background-image: url("../img/pointer.svg");
   }
 }
-
-

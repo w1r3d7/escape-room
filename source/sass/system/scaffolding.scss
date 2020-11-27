@@ -10,6 +10,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 img {

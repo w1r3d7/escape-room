@@ -116,3 +116,30 @@
   line-height: 27px;
   color: $gray;
 }
+
+.popup__wrapper--ask-question form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__wrapper--ask-question label {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0;
+}
+
+.popup__wrapper--ask-question input,
+.popup__wrapper--ask-question textarea {
+  width: 100%;
+  padding-left: 24px;
+  box-sizing: border-box;
+  height: 53px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  outline: none;
+  color: $gray;
+}

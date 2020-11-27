@@ -361,7 +361,9 @@ body {
   color: white;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on; }
 
 img {
   max-width: 100%;
@@ -473,9 +475,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 117%;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  -webkit-font-feature-settings: "pnum" on, "lnum" on;
-          font-feature-settings: "pnum" on, "lnum" on; }
+  letter-spacing: 0.03em; }
 
 .main-nav__logo {
   display: block;
@@ -807,4 +807,33 @@ input[type="radio"].visually-hidden {
   font-size: 17px;
   font-weight: 400;
   line-height: 27px;
+  color: #c6c4c2; }
+
+.popup__wrapper--ask-question form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.popup__wrapper--ask-question label {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0; }
+
+.popup__wrapper--ask-question input,
+.popup__wrapper--ask-question textarea {
+  width: 100%;
+  padding-left: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 53px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  outline: none;
   color: #c6c4c2; }

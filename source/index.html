@@ -65,7 +65,7 @@
         <a class="footer__ask-question" href="#">Задать вопрос</a>
       </div>
     </footer>
-    <div class="popup popup--close">
+    <div class="popup ">
       <div class="popup__wrapper popup__wrapper--close popup__wrapper--city">
         <div class="popup__title-button-wrapper">
           <h2>Ваш город:</h2>
@@ -92,6 +92,23 @@
             <a href="#">Комсомольск-на-Амуре</a>
           </li>
         </ul>
+      </div>
+      <div class="popup__wrapper  popup__wrapper--ask-question">
+        <div class="popup__title-button-wrapper">
+          <h2>Задайте вопрос</h2>
+          <button class="popup__wrapper-close-button" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+        </div>
+        <form action="#" method="post">
+          <label for="name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
+          <input type="text" name="name" id="name">
+          <label for="email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
+          <input type="email" name="email" id="email">
+          <label for="question">Ваш вопрос:</label>
+          <textarea name="question" id="question"></textarea>
+          <button type="submit">Отправить вопрос</button>
+        </form>
       </div>
     </div>
   </div>

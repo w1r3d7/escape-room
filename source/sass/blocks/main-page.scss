@@ -2,9 +2,14 @@
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 .main-page__header {
-  margin-bottom: 104px;
-}
+  margin-bottom: 112px;
 
+  @include media-mobile {
+    margin-bottom: 362px;
+  }
+}

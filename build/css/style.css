@@ -399,8 +399,16 @@ a {
   border-radius: 65px;
   background-color: #f2890f;
   color: #ffffff; }
+  @media (max-width: 767px) {
+    .btn {
+      font-size: 14px;
+      line-height: 16px; } }
   .btn:hover {
     background-color: #f39425; }
+  @media (max-width: 767px) {
+    .btn {
+      width: 185px;
+      min-height: 47px; } }
 
 .scroll-lock {
   position: fixed;
@@ -429,18 +437,29 @@ input[type="radio"].visually-hidden {
 .main-page {
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
 
 .main-page__header {
-  margin-bottom: 104px; }
+  margin-bottom: 112px; }
+  @media (max-width: 767px) {
+    .main-page__header {
+      margin-bottom: 362px; } }
 
 .header {
   padding-top: 24px; }
+  @media (max-width: 767px) {
+    .header {
+      padding-top: 19px; } }
 
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 14px;
   line-height: 117%;
   font-weight: 600;
@@ -449,7 +468,25 @@ input[type="radio"].visually-hidden {
           font-feature-settings: "pnum" on, "lnum" on; }
 
 .main-nav__logo {
-  margin-right: 11%; }
+  display: block;
+  width: 134px;
+  height: 52px; }
+  @media (max-width: 767px) {
+    .main-nav__logo {
+      width: 96px;
+      height: 36px; } }
+
+.main-nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70.5%; }
+  @media (max-width: 1023px) {
+    .main-nav__menu {
+      display: none; } }
 
 .main-nav__link-list {
   list-style: none;
@@ -458,12 +495,11 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 17px;
-  width: 41%; }
+  width: 58%; }
 
 .main-nav__link-item a {
   text-transform: uppercase;
@@ -507,26 +543,79 @@ input[type="radio"].visually-hidden {
   .main-nav__contacts-city:hover, .main-nav__contacts-city:focus {
     border-bottom: 1px dashed #f2890f; }
 
-.main__container {
-  padding-left: 10%; }
+.man-nav__menu-toggle {
+  display: none;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 29px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #f0f0f0; }
+  .man-nav__menu-toggle:hover, .man-nav__menu-toggle:focus {
+    color: #ffffff; }
+  .man-nav__menu-toggle::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/burger.svg");
+    background-repeat: no-repeat; }
+  @media (max-width: 1023px) {
+    .man-nav__menu-toggle {
+      display: block; } }
+
+@media (max-width: 767px) {
+  .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .main__title {
   margin: 0;
+  margin-left: 10%;
   margin-bottom: 30px;
-  width: 44%;
+  width: 544px;
   font-weight: 800;
   font-size: 64px;
-  line-height: auto;
+  line-height: 70px;
   color: #ffffff; }
+  @media (max-width: 767px) {
+    .main__title {
+      width: 310px;
+      margin-bottom: 34px;
+      margin-left: 0;
+      font-size: 36px;
+      line-height: 39px;
+      text-align: center; } }
 
 .main__about {
   margin: 0;
+  margin-left: 10%;
   margin-bottom: 68px;
-  width: 40%;
+  width: 468px;
   font-weight: 500;
   font-size: 17px;
   line-height: 150%;
   letter-spacing: 0; }
+  @media (max-width: 767px) {
+    .main__about {
+      display: none; } }
+
+.main__pick-quest {
+  margin-left: 10%; }
+  @media (max-width: 767px) {
+    .main__pick-quest {
+      margin-left: 0; } }
 
 .footer {
   margin-top: auto;

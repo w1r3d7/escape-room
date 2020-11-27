@@ -1,21 +1,38 @@
 .main-nav {
   display: flex;
+  justify-content: space-between;
 
   @include nav-header-desktop;
 }
 
 .main-nav__logo {
-  margin-right: 11%;
+  display: block;
+  width: 134px;
+  height: 52px;
+
+  @include media-mobile {
+    width: 96px;
+    height: 36px;
+  }
+}
+
+.main-nav__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 70.5%;
+
+  @include media-tablet {
+    display: none;
+  }
 }
 
 .main-nav__link-list {
-  @include ul-reset();
+  @include ul-reset;
 
   display: flex;
-  margin-left: auto;
   justify-content: space-between;
   padding-top: 17px;
-  width: 41%;
+  width: 58%;
 }
 
 .main-nav__link-item {
@@ -71,5 +88,37 @@
   &:hover,
   &:focus {
     border-bottom: 1px dashed $orange;
+  }
+}
+
+
+.man-nav__menu-toggle {
+  display: none;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 29px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: $light-gray;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/burger.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include media-tablet {
+    display: block;
   }
 }

@@ -30,8 +30,7 @@ a {
   padding-left: 32px;
   padding-right: 32px;
 
-
-  @media (max-width: $mobile-width) {
+  @include media-mobile {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -50,6 +49,11 @@ a {
 
   &:hover {
     background-color: $light-orange;
+  }
+
+  @include media-mobile {
+    width: 185px;
+    min-height: 47px;
   }
 }
 

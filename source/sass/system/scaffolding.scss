@@ -4,14 +4,11 @@ html {
 
 body {
   min-width: 360px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   font-family: $main-font;
-  background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
+  background: $background-gradient;
   color: white;
   font-size: 14px;
-  line-height: auto;
+  line-height: 16px;
   font-weight: 600;
 }
 

@@ -6,64 +6,96 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Escape Room</title>
 </head>
-<body class="main-page">
-  <header class="main-page__header header">
-    <div class="header__container container">
-      <nav class="header__main-nav main-nav">
-        <a class="main-nav__logo">
-          <picture>
-              <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-              <!-- 1х: 134px; 2x: 268px -->
-              <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
-          </picture>
-        </a>
-        <div class="main-nav__menu">
-          <ul class="main-nav__link-list">
-            <li class="main-nav__link-item">
-              <a href="quests.html">Квесты</a>
-            </li>
-            <li class="main-nav__link-item">
-              <a href="#">Новичкам</a>
-            </li>
-            <li class="main-nav__link-item">
-              <a href="#">Отзывы</a>
-            </li>
-            <li class="main-nav__link-item">
-              <a href="#">Акции</a>
-            </li>
-            <li class="main-nav__link-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-          <div class="main-nav__contacts">
-            <a class="main-nav__contacts-city" href="#">Новосибирск</a>
-            <a class="main-nav__contacts-phone" href="tel:+73832840160">8 (383) 284 01 60</a>
+<body>
+  <div class="main-page">
+    <header class="main-page__header header">
+      <div class="header__container container">
+        <nav class="header__main-nav main-nav">
+          <a class="main-nav__logo">
+            <picture>
+                <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+                <!-- 1х: 134px; 2x: 268px -->
+                <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
+            </picture>
+          </a>
+          <div class="main-nav__menu">
+            <ul class="main-nav__link-list">
+              <li class="main-nav__link-item">
+                <a href="quests.html">Квесты</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Новичкам</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Акции</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="main-nav__contacts">
+              <a class="main-nav__contacts-city" href="#">Новосибирск</a>
+              <a class="main-nav__contacts-phone" href="tel:+73832840160">8 (383) 284 01 60</a>
+            </div>
           </div>
+          <button class="man-nav__menu-toggle">Меню</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main-page__main main">
+      <div class="main__container container">
+        <h1>Лучшие квесты в Новосибирске</h1>
+        <p>Надоело проводить свободное время лёжа на диване?  Игровые площадки questroom на целый час погружают вас  в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!</p>
+        <a class="main__pick-quest btn" href="quests.html">Выбрать квест</a>
+      </div>
+    </main>
+    <footer class="main-page__footer footer">
+      <div class="footer__container container">
+        <ul class="footer__social-list ">
+          <li class="footer__social-item footer__social-item--instagram">
+            <a href="#" aria-label="ссылка на наш инстаграм"></a>
+          </li>
+          <li class="footer__social-item footer__social-item--vk">
+            <a href="#" aria-label="ссылка на наш вконтакт"></a>
+          </li>
+        </ul>
+        <a class="footer__ask-question" href="#">Задать вопрос</a>
+      </div>
+    </footer>
+    <div class="popup popup--close">
+      <div class="popup__wrapper popup__wrapper--close popup__wrapper--city">
+        <div class="popup__title-button-wrapper">
+          <h2>Ваш город:</h2>
+          <button class="popup__wrapper-close-button" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
         </div>
-        <button class="man-nav__menu-toggle">Меню</button>
-      </nav>
+        <button class="popup__wrapper-location-button" type="button">Определить местоположение</button>
+        <p>... или выберите вручную</p>
+        <ul class="popup__wrapper-city-list">
+          <li class="popup__wrapper-city-item popup__wrapper-city-item--active">
+            <a href="#">Новосибирск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Иркутск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Смоленск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Волгоград</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Комсомольск-на-Амуре</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
-  <main class="main-page__main main">
-    <div class="main__container container">
-      <h1 class="main__title">Лучшие квесты в Новосибирске</h1>
-      <p class="main__about">Надоело проводить свободное время лёжа на диване?  Игровые площадки questroom на целый час погружают вас  в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!</p>
-      <a class="main__pick-quest btn" href="quests.html">Выбрать квест</a>
-    </div>
-  </main>
-  <footer class="main-page__footer footer">
-    <div class="footer__container container">
-      <ul class="footer__social-list ">
-        <li class="footer__social-item footer__social-item--instagram">
-          <a href="#" aria-label="ссылка на наш инстаграм"></a>
-        </li>
-        <li class="footer__social-item footer__social-item--vk">
-          <a href="#" aria-label="ссылка на наш вконтакт"></a>
-        </li>
-      </ul>
-      <a class="footer__ask-question" href="#">Задать вопрос</a>
-    </div>
-  </footer>
+  </div>
   <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

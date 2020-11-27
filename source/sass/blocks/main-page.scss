@@ -1,4 +1,7 @@
 .main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;

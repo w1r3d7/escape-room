@@ -47,6 +47,12 @@
   }
 }
 
+.main-nav__link-item--active {
+  a {
+    color: $orange;
+  }
+}
+
 .main-nav__contacts {
   display: flex;
   padding-top: 17px;

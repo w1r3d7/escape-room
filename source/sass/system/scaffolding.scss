@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: $main-font;
-  background-color: #191312;
+  background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
   color: white;
   font-size: 14px;
   line-height: auto;
@@ -39,6 +39,9 @@ a {
 .btn {
   @include btn-caps;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   width: 250px;
   min-height: 65px;

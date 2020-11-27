@@ -22,6 +22,11 @@
   a {
     text-transform: uppercase;
     color: $light-gray;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 }
 
@@ -34,13 +39,18 @@
 
 .main-nav__contacts-phone {
   color: $light-gray;
-  font-feature-settings: "pnum" on, "lnum" on;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
 }
 
 .main-nav__contacts-city {
   position: relative;
+  align-self: baseline;
   margin-right: 25px;
-  padding-left: 24px;
+  margin-left: 24px;
   color: $orange;
   font-weight: 700;
   font-size: 12px;
@@ -51,10 +61,15 @@
   &::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -24px;
     top: -2px;
     width: 16px;
     height: 21px;
     background-image: url("../img/pointer.svg");
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px dashed $orange;
   }
 }

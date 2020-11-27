@@ -47,6 +47,10 @@ a {
   border-radius: 65px;
   background-color: $orange;
   color: $white;
+
+  &:hover {
+    background-color: $light-orange;
+  }
 }
 
 .scroll-lock {

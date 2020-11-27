@@ -1,0 +1,70 @@
+.footer {
+  margin-top: auto;
+  padding-bottom: 24px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__social-list {
+  @include ul-reset;
+
+  display: flex;
+}
+
+.footer__social-item {
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-item a {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.footer__ask-question {
+  @include text-caption;
+
+  position: relative;
+  color: $gray;
+  border-bottom: 1px dashed $gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &:hover {
+    padding-left: 8px;
+    color: $orange;
+    border-bottom: 1px dashed $orange;
+
+    &::before {
+      content: "?";
+      left: 0;
+    }
+  }
+}
+
+.footer__social-item--instagram a {
+  background-image: url("../img/instagram.svg");
+
+  &:hover {
+    background-image: url("../img/instagram-hover.svg");
+  }
+}
+
+.footer__social-item--vk a {
+  background-image: url("../img/vk.svg");
+
+  &:hover {
+    background-image: url("../img/vk-hover.svg");
+  }
+}

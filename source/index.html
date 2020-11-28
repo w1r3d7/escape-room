@@ -65,7 +65,7 @@
         <a class="footer__ask-question" href="#">Задать вопрос</a>
       </div>
     </footer>
-    <div class="popup ">
+    <div class="popup popup--close">
       <div class="popup__wrapper popup__wrapper--close popup__wrapper--city">
         <div class="popup__title-button-wrapper">
           <h2>Ваш город:</h2>
@@ -93,21 +93,33 @@
           </li>
         </ul>
       </div>
-      <div class="popup__wrapper  popup__wrapper--ask-question">
+      <div class="popup__wrapper popup__wrapper--close popup__wrapper--ask-question">
         <div class="popup__title-button-wrapper">
           <h2>Задайте вопрос</h2>
           <button class="popup__wrapper-close-button" type="button">
             <span class="visually-hidden">Закрыть окно</span>
           </button>
         </div>
-        <form action="#" method="post">
+        <form action="#" method="post" novalidate>
           <label for="name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
-          <input type="text" name="name" id="name">
+          <div class="popup__wrapper-input">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <span class="popup__placeholder">Имя</span>
+            <span class="popup__error">Введено некорректоное имя, попробуйте заново</span>
+          </div>
           <label for="email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
-          <input type="email" name="email" id="email">
+          <div class="popup__wrapper-input">
+            <input type="email" name="email" id="email" placeholder=" " required>
+            <span class="popup__placeholder">E-mail</span>
+            <span class="popup__error">Введено некорректоный email, попробуйте заново</span>
+          </div>
           <label for="question">Ваш вопрос:</label>
-          <textarea name="question" id="question"></textarea>
-          <button type="submit">Отправить вопрос</button>
+          <textarea name="question" id="question" placeholder="Начните вводить..."></textarea>
+          <button class="btn popup__submit-btn" type="submit" disabled>Отправить вопрос</button>
+          <div class="popup__agreement">
+            <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
+            <label for="agreement">Я согласен с <a href="#">правилами обработки персональных данных</a> и пользовательским соглашением</label>
+          </div>
         </form>
       </div>
     </div>

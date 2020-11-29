@@ -2,6 +2,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .page--main {
@@ -10,21 +11,16 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+
+  @include media-mobile {
+    .page__footer {
+      display: none;
+    }
+  }
 }
 
 .page--quests {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: $background-gradient;
-}
-
-.page__header {
-  margin-bottom: 112px;
-
-  @include media-mobile {
-    margin-bottom: 362px;
-  }
 }
 
 .page--menu-open {
@@ -33,5 +29,9 @@
 
   .page__header {
     margin-bottom: 0;
+  }
+
+  .page__footer {
+    display: block;
   }
 }

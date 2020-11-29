@@ -1,6 +1,9 @@
 .footer {
-  margin-top: auto;
   padding-bottom: 24px;
+
+  @include media-tablet {
+    padding-bottom: 36px;
+  }
 }
 
 .footer__container {
@@ -20,6 +23,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include media-tablet {
+    margin-right: 16px;
   }
 }
 

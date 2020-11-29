@@ -7,20 +7,23 @@
   <title>Escape Room</title>
 </head>
 <body>
-  <div class="quests-page">
-    <header class="quests-page__header header">
+  <div class="page page--quests">
+    <header class="page__header header">
       <div class="header__container container">
         <nav class="header__main-nav main-nav">
-          <a href="index.html" class="main-nav__logo">
-            <picture>
-                <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-                <!-- 1х: 134px; 2x: 268px -->
-                <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
-            </picture>
-          </a>
-          <div class="main-nav__menu">
+          <div class="main-nav__logo-wrapper">
+            <a class="main-nav__logo" href="index.html">
+              <picture>
+                  <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 134px; 2x: 268px -->
+                  <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
+              </picture>
+            </a>
+            <button class="man-nav__menu-toggle ">Меню</button>
+          </div>
+          <div class="main-nav__menu main-nav__menu--close">
             <ul class="main-nav__link-list">
-              <li class="main-nav__link-item">
+              <li class="main-nav__link-item main-nav__link-item--active">
                 <a href="quests.html">Квесты</a>
               </li>
               <li class="main-nav__link-item">
@@ -41,7 +44,7 @@
               <a class="main-nav__contacts-phone" href="tel:+73832840160">8 (383) 284 01 60</a>
             </div>
           </div>
-          <button class="man-nav__menu-toggle">Меню</button>
+
         </nav>
       </div>
     </header>
@@ -50,7 +53,7 @@
         <h1 class="main__title">Выберите тематику</h1>
       </div>
     </main>
-    <footer class="quests-page__footer footer">
+    <footer class="page__footer footer">
       <div class="footer__container container">
         <ul class="footer__social-list ">
           <li class="footer__social-item footer__social-item--instagram">
@@ -105,11 +108,11 @@
             <span class="popup__placeholder">Имя</span>
             <span class="popup__error">Введено некорректоное имя, попробуйте заново</span>
           </div>
-          <label for="email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
+          <label for="email">Чтобы вы получили ответ, оставьте ваш e&#8209;mail</label>
           <div class="popup__wrapper-input">
             <input type="email" name="email" id="email" placeholder=" " required>
             <span class="popup__placeholder">E-mail</span>
-            <span class="popup__error">Введено некорректоный email, попробуйте заново</span>
+            <span class="popup__error">Введено некорректный email, попробуйте заново</span>
           </div>
           <label for="question">Ваш вопрос:</label>
           <textarea name="question" id="question" placeholder="Начните вводить..."></textarea>

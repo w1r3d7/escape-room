@@ -183,9 +183,14 @@
     height: 14px;
     background-image: url("../img/burger.svg");
     background-repeat: no-repeat;
+    transition: background-image 0.2s ease-in-out;
   }
 
   @include media-tablet {
     display: block;
   }
+}
+
+.man-nav__menu-toggle--opened::after {
+  background-image: url("../img/close.svg");
 }

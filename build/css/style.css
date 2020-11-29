@@ -664,10 +664,15 @@ input[type="radio"].visually-hidden {
     width: 20px;
     height: 14px;
     background-image: url("../img/burger.svg");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out; }
   @media (max-width: 1023px) {
     .man-nav__menu-toggle {
       display: block; } }
+
+.man-nav__menu-toggle--opened::after {
+  background-image: url("../img/close.svg"); }
 
 .main--close {
   display: none; }
@@ -899,6 +904,7 @@ input[type="radio"].visually-hidden {
   width: 16px;
   height: 16px;
   background-image: url("../img/close.svg");
+  opacity: 0.5;
   cursor: pointer; }
 
 .popup__wrapper-location-button {

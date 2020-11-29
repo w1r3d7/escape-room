@@ -7,18 +7,21 @@
   <title>Escape Room</title>
 </head>
 <body>
-  <div class="main-page">
-    <header class="main-page__header header">
+  <div class="page page--main">
+    <header class="page__header header">
       <div class="header__container container">
         <nav class="header__main-nav main-nav">
-          <a class="main-nav__logo">
-            <picture>
-                <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-                <!-- 1х: 134px; 2x: 268px -->
-                <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
-            </picture>
-          </a>
-          <div class="main-nav__menu">
+          <div class="main-nav__logo-wrapper">
+            <a class="main-nav__logo">
+              <picture>
+                  <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 134px; 2x: 268px -->
+                  <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
+              </picture>
+            </a>
+            <button class="man-nav__menu-toggle">Меню</button>
+          </div>
+          <div class="main-nav__menu main-nav__menu--close">
             <ul class="main-nav__link-list">
               <li class="main-nav__link-item">
                 <a href="quests.html">Квесты</a>
@@ -41,18 +44,18 @@
               <a class="main-nav__contacts-phone" href="tel:+73832840160">8 (383) 284 01 60</a>
             </div>
           </div>
-          <button class="man-nav__menu-toggle">Меню</button>
+
         </nav>
       </div>
     </header>
-    <main class="main-page__main main">
+    <main class="page__main main">
       <div class="main__container container">
         <h1>Лучшие квесты в Новосибирске</h1>
         <p>Надоело проводить свободное время лёжа на диване?  Игровые площадки questroom на целый час погружают вас  в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!</p>
         <a class="main__pick-quest btn" href="quests.html">Выбрать квест</a>
       </div>
     </main>
-    <footer class="main-page__footer footer">
+    <footer class="page__footer footer">
       <div class="footer__container container">
         <ul class="footer__social-list ">
           <li class="footer__social-item footer__social-item--instagram">
@@ -111,7 +114,7 @@
           <div class="popup__wrapper-input">
             <input type="email" name="email" id="email" placeholder=" " required="">
             <span class="popup__placeholder">E-mail</span>
-            <span class="popup__error">Введено некорректоный email, попробуйте заново</span>
+            <span class="popup__error">Введено некорректный email, попробуйте заново</span>
           </div>
           <label for="question">Ваш вопрос:</label>
           <textarea name="question" id="question" placeholder="Начните вводить..."></textarea>

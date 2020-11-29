@@ -3,11 +3,12 @@
   var POPUP_CLOSE_CLASS = 'popup--close';
   var POPUP_WRAPPER_CLOSE_CLASS = 'popup__wrapper--close';
   var VALID_INPUT_WRAPPER_CLASS = 'popup__wrapper-input--valid';
+  var SCROLL_LOCK_CLASS = 'scroll-lock';
   var INVALID_INPUT_WRAPPER_CLASS = 'popup__wrapper-input--invalid';
   var EMAIL_REG = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   var popup = document.querySelector('.popup');
-  var popupWrapper = popup.querySelector('.popup__wrapper--ask-question')
+  var popupWrapper = popup.querySelector('.popup__wrapper--ask-question');
   var popupForm = popupWrapper.querySelector('form');
   var inputName = popupForm.querySelector('input[name="name"]');
   var inputEmail = popupForm.querySelector('input[name="email"]');
@@ -87,6 +88,7 @@
       submitButton.disabled = true;
       popup.classList.add(POPUP_CLOSE_CLASS);
       popupWrapper.classList.add(POPUP_WRAPPER_CLOSE_CLASS);
+      document.querySelector('body').classList.remove(SCROLL_LOCK_CLASS);
     });
   }
 })();

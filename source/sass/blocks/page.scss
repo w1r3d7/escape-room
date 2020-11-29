@@ -1,7 +1,10 @@
-.main-page {
+.page {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.page--main {
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,10 +12,26 @@
   background-position: center center;
 }
 
-.main-page__header {
+.page--quests {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $background-gradient;
+}
+
+.page__header {
   margin-bottom: 112px;
 
   @include media-mobile {
     margin-bottom: 362px;
+  }
+}
+
+.page--menu-open {
+  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
+
+
+  .page__header {
+    margin-bottom: 0;
   }
 }

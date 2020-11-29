@@ -3,6 +3,10 @@
   justify-content: space-between;
 
   @include nav-header-desktop;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
 }
 
 .main-nav__logo {
@@ -16,11 +20,28 @@
   }
 }
 
+.main-nav__logo-wrapper {
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
 .main-nav__menu {
   display: flex;
   justify-content: space-between;
   width: 70.5%;
 
+  @include media-mobile {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main-nav__menu--close {
   @include media-tablet {
     display: none;
   }
@@ -33,6 +54,12 @@
   justify-content: space-between;
   padding-top: 17px;
   width: 58%;
+
+  @include media-tablet {
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
 }
 
 .main-nav__link-item {
@@ -43,6 +70,20 @@
     &:hover,
     &:focus {
       color: $white;
+    }
+
+    @include media-tablet {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  @include media-tablet {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -58,6 +99,16 @@
   padding-top: 17px;
   margin-left: auto;
   margin-right: 7px;
+
+  @include media-tablet {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
 }
 
 .main-nav__contacts-phone {
@@ -71,8 +122,11 @@
 
 .main-nav__contacts-city {
   position: relative;
+  box-sizing: border-box;
+  min-height: 16px;
   align-self: baseline;
   margin-right: 25px;
+  margin-bottom: 10px;
   margin-left: 24px;
   color: $orange;
   font-weight: 700;
@@ -95,6 +149,12 @@
   &:focus {
     border-bottom: 1px dashed $orange;
   }
+
+  @include media-tablet {
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-self: center;
+  }
 }
 
 
@@ -108,6 +168,7 @@
   background-color: transparent;
   text-transform: uppercase;
   color: $light-gray;
+  cursor: pointer;
 
   &:hover,
   &:focus {

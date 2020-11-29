@@ -27,6 +27,13 @@
   display: block;
   width: 28px;
   height: 28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-tablet {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .footer__ask-question {
@@ -41,7 +48,8 @@
     position: absolute;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     padding-left: 8px;
     color: $orange;
     border-bottom: 1px dashed $orange;
@@ -51,12 +59,24 @@
       left: 0;
     }
   }
+
+  @include media-tablet {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus {
+      padding-left: 10px;
+    }
+  }
 }
 
 .footer__social-item--instagram a {
   background-image: url("../img/instagram.svg");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("../img/instagram-hover.svg");
   }
 }
@@ -64,7 +84,8 @@
 .footer__social-item--vk a {
   background-image: url("../img/vk.svg");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url("../img/vk-hover.svg");
   }
 }

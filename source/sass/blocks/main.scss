@@ -1,3 +1,7 @@
+.main--close {
+  display: none;
+}
+
 .main__container {
   @include media-mobile {
     display: flex;

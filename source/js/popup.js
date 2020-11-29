@@ -22,6 +22,7 @@
     Array.from(popupWrappers).forEach(function (it) {
       it.classList.add(POPUP_WRAPPER_CLOSE_CLASS);
     });
+    body.classList.remove(SCROLL_LOCK_CLASS);
   };
 
   var toggleClass = function (node, className) {

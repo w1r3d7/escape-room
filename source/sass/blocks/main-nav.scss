@@ -192,5 +192,7 @@
 }
 
 .man-nav__menu-toggle--opened::after {
+  width: 16px;
+  height: 16px;
   background-image: url("../img/close.svg");
 }

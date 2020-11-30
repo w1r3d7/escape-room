@@ -1,0 +1,145 @@
+.quests__filter {
+  @include ul-reset;
+
+  display: flex;
+  width: 82%;
+  margin-bottom: 45px;
+  justify-content: space-between;
+
+  @include media-tablet {
+    width: 100%;
+    margin-bottom: 41px;
+    overflow-x: scroll;
+  }
+
+  :first-child {
+    padding-left: 0;
+  }
+
+  :last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+.quests__filter__item {
+  padding-right: 44px;
+  padding-left: 38px;
+  border-right: 1px solid rgba(255, 255, 255, 0.32);
+
+  @include media-tablet {
+    padding-right: 18px;
+    padding-left: 13px;
+  }
+}
+
+.quests__filter__item a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 2px;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.quests__filter__item > a > svg {
+  margin-right: 12px;
+
+  @include media-tablet {
+    transform: scale(0.8);
+    margin-right: 8px;
+  }
+}
+
+.quests__filter__item--active span {
+  border-bottom: 2px solid $orange;
+}
+
+.quests__list {
+  @include ul-reset;
+
+  width: 93%;
+  overflow-y: scroll;
+  height: 55vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 344px);
+  grid-column-gap: 24px;
+  grid-row-gap: 32px;
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
+
+  @include media-tablet {
+    width: 100%;
+    grid-row-gap: 15px;
+  }
+}
+
+.quests__item {
+  position: relative;
+  width: 344px;
+  height: 232px;
+
+  @include media-tablet {
+    width: 328px;
+    height: 232px;
+  }
+}
+
+.quests__item-wrapper {
+  position: absolute;
+  bottom: 19px;
+  left: 19px;
+  width: 90%;
+}
+
+.quests__item-wrapper span {
+  display: inline-flex;
+  color: $gray;
+}
+
+.quests__item-wrapper h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  width: 83%;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $white;
+}
+
+.quests__item-wrapper address {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  font-style: normal;
+  color: $gray;
+}
+
+.quests__item-wrapper svg {
+  margin-right: 8px;
+}
+
+.quests__item-hit-mark {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63px;
+  height: 24px;
+  right: 16px;
+  top: 15px;
+  border: 2px solid rgba(242, 137, 15, 0.74);
+  border-radius: 25px;
+  color: $gray;
+}
+
+.quests__item-wrapper span:first-of-type {
+  padding-right: 10px;
+  margin-right: 7px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}

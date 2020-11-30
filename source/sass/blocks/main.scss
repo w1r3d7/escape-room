@@ -2,28 +2,15 @@
   display: none;
 }
 
-.main__container {
-  @include media-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 64px;
-  }
-}
-
 .main h1 {
   margin: 0;
-  margin-left: 10%;
-  margin-bottom: 30px;
-  width: 544px;
+  margin-left: 8%;
   font-weight: 800;
   font-size: 64px;
   line-height: 70px;
   color: $white;
 
   @include media-mobile {
-    width: 310px;
-    margin-bottom: 34px;
     margin-left: 0;
     font-size: 36px;
     line-height: 39px;
@@ -31,11 +18,27 @@
   }
 }
 
+.main--main-page h1 {
+  margin-bottom: 30px;
+  width: 544px;
+
+  @include media-mobile {
+    width: 310px;
+    margin-bottom: 34px;
+  }
+}
+
+.main--main-page .main__container {
+  @include media-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .main p {
   margin: 0;
-  margin-left: 10%;
-  margin-bottom: 68px;
-  width: 468px;
+  margin-left: 8%;
   font-weight: 500;
   font-size: 17px;
   line-height: 150%;
@@ -46,10 +49,57 @@
   }
 }
 
+.main--main-page p {
+  margin-bottom: 68px;
+  width: 468px;
+}
+
 .main__pick-quest {
-  margin-left: 10%;
+  margin-left: 8%;
 
   @include media-mobile {
     margin-left: 0;
+  }
+}
+
+.main--quest-page {
+  margin-top: 44px;
+  margin-bottom: auto;
+
+  @include media-tablet {
+    margin-top: 0;
+  }
+}
+
+.main--quest-page > div > span {
+  margin-left: 8%;
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $orange;
+
+  @include media-tablet {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.main__quests {
+  margin-left: 8%;
+
+  @include media-tablet {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.main--quest-page h1 {
+  margin-bottom: 52px;
+
+  @include media-tablet {
+    text-align: left;
+    margin-bottom: 41px;
   }
 }

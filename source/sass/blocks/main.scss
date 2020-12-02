@@ -14,7 +14,6 @@
     margin-left: 0;
     font-size: 36px;
     line-height: 39px;
-    text-align: center;
   }
 }
 
@@ -25,6 +24,7 @@
   @include media-mobile {
     width: 310px;
     margin-bottom: 34px;
+    text-align: center;
   }
 }
 
@@ -43,15 +43,15 @@
   font-size: 17px;
   line-height: 150%;
   letter-spacing: 0;
-
-  @include media-mobile {
-    display: none;
-  }
 }
 
 .main--main-page p {
   margin-bottom: 68px;
   width: 468px;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .main__pick-quest {
@@ -59,10 +59,11 @@
 
   @include media-mobile {
     margin-left: 0;
+    margin-bottom: 64px;
   }
 }
 
-.main--quest-page {
+.main--quests-page {
   margin-top: 44px;
   margin-bottom: auto;
 
@@ -71,7 +72,7 @@
   }
 }
 
-.main--quest-page > div > span {
+.main--quests-page > div > span {
   margin-left: 8%;
   display: block;
   margin-bottom: 9px;
@@ -95,11 +96,40 @@
   }
 }
 
-.main--quest-page h1 {
+.main--quests-page h1 {
   margin-bottom: 52px;
 
   @include media-tablet {
     text-align: left;
     margin-bottom: 41px;
+  }
+}
+
+.main--quest-page {
+  margin-top: 73px;
+  margin-bottom: auto;
+
+  @include media-tablet {
+    margin-top: 7px;
+  }
+}
+
+.main__all-quests-link {
+  display: none;
+  padding-left: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: $gray;
+  text-transform: uppercase;
+
+  @include media-tablet {
+    display: block;
+    margin-bottom: 286px;
+  }
+
+  svg {
+    margin-right: 8px;
   }
 }

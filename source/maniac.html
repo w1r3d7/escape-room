@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Квест Маньяк</title>
+</head>
+<body>
+  <div class="visually-hidden">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <div class="page page--quest page--maniac">
+    <header class="page__header header">
+      <div class="header__container container">
+        <nav class="header__main-nav main-nav">
+          <div class="main-nav__logo-wrapper">
+            <a class="main-nav__logo" href="index.html">
+              <picture>
+                  <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 134px; 2x: 268px -->
+                  <img src="img/logo.png" width="134" height="52" alt="Логотип компании" srcset="img/logo@2x.png 2x" loading="lazy">
+              </picture>
+            </a>
+            <button class="man-nav__menu-toggle">Меню</button>
+          </div>
+          <div class="main-nav__menu main-nav__menu--close">
+            <ul class="main-nav__link-list">
+              <li class="main-nav__link-item main-nav__link-item--active">
+                <a href="quests.html">Квесты</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Новичкам</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Акции</a>
+              </li>
+              <li class="main-nav__link-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="main-nav__contacts">
+              <a class="main-nav__contacts-city" href="#">Новосибирск</a>
+              <a class="main-nav__contacts-phone" href="tel:+73832840160">8 (383) 284 01 60</a>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+    <main class="page__main main main--quest-page">
+      <a class="main__all-quests-link" href="quests.html">
+        <svg width="6" height="10">
+          <use xlink:href="#arrow" fill="none"></use>
+        </svg>Все квесты</a>
+      <div class="main__quest quest">
+        <span class="quest__genre">хоррор, триллер</span>
+        <h1>Маньяк</h1>
+        <div class="quest__info">
+          <span>
+            <svg width="20" height="20">
+              <use xlink:href="#clock"></use>
+            </svg>
+            60 мин
+          </span>
+          <span>
+            <svg width="16" height="21" viewBox="0 0 13 16" fill="none">
+              <use xlink:href="#person"></use>
+            </svg>
+            3-4 чел
+          </span>
+          <span>
+            <svg width="21" height="21" viewBox="0 0 16 16">
+              <use xlink:href="#puzzle"></use>
+            </svg>средняя сложность
+          </span>
+        </div>
+        <p>В комнате с приглушённым светом несколько человек, незнакомых друг с другом, приходят в себя. Никто не помнит, что произошло прошлым вечером. Руки и ноги связаным, но одному из вас получилось освободиться. На стене висит пугающий таймер и запущен отстёт 60&nbsp;минут. Сможете ли вы разобраться в стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
+        <a class="quest__btn btn" href="#">Забронировать</a>
+      </div>
+    </main>
+    <footer class="page__footer footer">
+      <div class="footer__container container">
+        <ul class="footer__social-list ">
+          <li class="footer__social-item footer__social-item--instagram">
+            <a href="#" aria-label="ссылка на наш инстаграм"></a>
+          </li>
+          <li class="footer__social-item footer__social-item--vk">
+            <a href="#" aria-label="ссылка на наш вконтакт"></a>
+          </li>
+        </ul>
+        <a class="footer__ask-question" href="#">Задать вопрос</a>
+      </div>
+    </footer>
+    <div class="popup popup--close">
+      <div class="popup__wrapper popup__wrapper--close popup__wrapper--city">
+        <div class="popup__title-button-wrapper">
+          <h2>Ваш город:</h2>
+          <button class="popup__wrapper-close-button" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+        </div>
+        <button class="popup__wrapper-location-button" type="button">Определить местоположение</button>
+        <p>... или выберите вручную</p>
+        <ul class="popup__wrapper-city-list">
+          <li class="popup__wrapper-city-item popup__wrapper-city-item--active">
+            <a href="#">Новосибирск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Иркутск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Смоленск</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Волгоград</a>
+          </li>
+          <li class="popup__wrapper-city-item">
+            <a href="#">Комсомольск-на-Амуре</a>
+          </li>
+        </ul>
+      </div>
+      <div class="popup__wrapper popup__wrapper--close popup__wrapper--ask-question">
+        <div class="popup__title-button-wrapper">
+          <h2>Задайте вопрос</h2>
+          <button class="popup__wrapper-close-button" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+        </div>
+        <form action="#" method="post" novalidate>
+          <label for="name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
+          <div class="popup__wrapper-input">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <span class="popup__placeholder">Имя</span>
+            <span class="popup__error">Введено некорректоное имя, попробуйте заново</span>
+          </div>
+          <label for="email">Чтобы вы получили ответ, оставьте ваш e&#8209;mail</label>
+          <div class="popup__wrapper-input">
+            <input type="email" name="email" id="email" placeholder=" " required>
+            <span class="popup__placeholder">E-mail</span>
+            <span class="popup__error">Введено некорректный email, попробуйте заново</span>
+          </div>
+          <label for="question">Ваш вопрос:</label>
+          <textarea name="question" id="question" placeholder="Начните вводить..."></textarea>
+          <button class="btn popup__submit-btn" type="submit" disabled>Отправить вопрос</button>
+          <div class="popup__agreement">
+            <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
+            <label for="agreement">Я согласен с <a href="#">правилами обработки персональных данных</a> и пользовательским соглашением</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

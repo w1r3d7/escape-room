@@ -19,7 +19,7 @@
 
   var closeAll = function () {
     popup.classList.add(POPUP_CLOSE_CLASS);
-    Array.from(popupWrappers).forEach(function (it) {
+    Array.prototype.forEach.call(popupWrappers, function (it) {
       it.classList.add(POPUP_WRAPPER_CLOSE_CLASS);
     });
     body.classList.remove(SCROLL_LOCK_CLASS);

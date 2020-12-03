@@ -402,6 +402,7 @@ a {
   border: none;
   border-radius: 65px;
   background-color: #f2890f;
+  line-height: 65px;
   color: #ffffff; }
   @media (max-width: 767px) {
     .btn {
@@ -412,7 +413,8 @@ a {
   @media (max-width: 767px) {
     .btn {
       width: 185px;
-      min-height: 47px; } }
+      min-height: 47px;
+      line-height: 47px; } }
 
 .scroll-lock {
   position: fixed;
@@ -439,7 +441,8 @@ input[type="radio"].visually-hidden {
   overflow: hidden; }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,7 +461,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center center; }
 
 .page--quests {
@@ -469,18 +471,10 @@ input[type="radio"].visually-hidden {
     width: 100%;
     bottom: 0; }
 
-.page--menu-open {
-  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%); }
-  .page--menu-open .page__header {
-    margin-bottom: 0; }
-  .page--menu-open .page__footer {
-    display: block; }
-
 .page--maniac {
   background-image: url("../img/maniac-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center center; }
   @media (max-width: 1023px) {
     .page--maniac {
@@ -499,6 +493,37 @@ input[type="radio"].visually-hidden {
       background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/old-mansion-bg.jpg");
       background-size: cover;
       background-position: 20% center; } }
+
+.page--ritual {
+  background-image: url("../img/ritual-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
+  @media (max-width: 1023px) {
+    .page--ritual {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/ritual-bg.jpg");
+      background-size: cover;
+      background-position: 20% center; } }
+
+.page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
+  @media (max-width: 1023px) {
+    .page--fatal-experiment {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg.jpg");
+      background-size: cover;
+      background-position: 20% center; } }
+
+.page--menu-open {
+  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%); }
+  .page--menu-open .page__header {
+    margin-bottom: 0; }
+  .page--menu-open .page__footer {
+    display: block; }
 
 .header {
   padding-top: 24px; }
@@ -670,6 +695,7 @@ input[type="radio"].visually-hidden {
       margin-right: 0;
       margin-bottom: 20px;
       -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
           align-self: center; } }
 
 .man-nav__menu-toggle {
@@ -1223,15 +1249,13 @@ input[type="radio"].visually-hidden {
   width: 93%;
   overflow-y: scroll;
   height: 55vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 344px);
-  grid-column-gap: 24px;
-  grid-row-gap: 32px; }
-  .quests__list::after {
-    content: "";
-    -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
   @media (max-width: 1023px) {
     .quests__list {
       width: 100%;
@@ -1240,7 +1264,8 @@ input[type="radio"].visually-hidden {
 .quests__item {
   position: relative;
   width: 344px;
-  height: 232px; }
+  height: 232px;
+  margin-bottom: 32px; }
   @media (max-width: 1023px) {
     .quests__item {
       width: 328px;

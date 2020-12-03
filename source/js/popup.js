@@ -51,6 +51,21 @@
     toggleClass(askQuestionPopup, POPUP_WRAPPER_CLOSE_CLASS);
   };
 
+  if (popup) {
+    popup.addEventListener('click', function () {
+      document.removeEventListener('keydown', escButtonHandler);
+      closeAll();
+    });
+  }
+
+  if (popupWrappers) {
+    Array.prototype.forEach.call(popupWrappers, function (node) {
+      node.addEventListener('click', function (evt) {
+        evt.stopPropagation();
+      });
+    });
+  }
+
 
   if (chooseCityButton) {
     chooseCityButton.addEventListener('click', function (evt) {
@@ -61,15 +76,13 @@
   }
 
   if (closePopupButtons) {
-    Array
-        .from(closePopupButtons)
-        .forEach(function (it) {
-          it.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            document.removeEventListener('keydown', escButtonHandler);
-            closeAll();
-          });
-        });
+    Array.prototype.forEach.call(closePopupButtons, function (it) {
+      it.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        document.removeEventListener('keydown', escButtonHandler);
+        closeAll();
+      });
+    });
   }
 
   if (askQuestionButton) {

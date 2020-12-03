@@ -6,15 +6,36 @@
   var SCROLL_LOCK_CLASS = 'scroll-lock';
   var INVALID_INPUT_WRAPPER_CLASS = 'popup__wrapper-input--invalid';
   var EMAIL_REG = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var NAME_FIELD = 'name';
+  var EMAIL_FIELD = 'email';
+  var QUESTION_FIELD = 'question';
 
   var popup = document.querySelector('.popup');
   var popupWrapper = popup.querySelector('.popup__wrapper--ask-question');
   var popupForm = popupWrapper.querySelector('form');
   var inputName = popupForm.querySelector('input[name="name"]');
   var inputEmail = popupForm.querySelector('input[name="email"]');
+  var textAreaQuestion = popupForm.querySelector('textarea');
   var submitButton = popupForm.querySelector('button');
   var inputAgreement = popupForm.querySelector('.popup__agreement').querySelector('input');
   var inputWrappers = popupForm.querySelectorAll('.popup__wrapper-input');
+
+  var storage = window.localStorage;
+  var nameField = storage.getItem(NAME_FIELD);
+  var emailField = storage.getItem(EMAIL_FIELD);
+  var questionField = storage.getItem(QUESTION_FIELD);
+
+  if (nameField) {
+    inputName.value = nameField;
+  }
+
+  if (emailField) {
+    inputEmail.value = emailField;
+  }
+
+  if (questionField) {
+    textAreaQuestion.value = questionField;
+  }
 
   var addValidClass = function (element) {
     element.classList.remove(INVALID_INPUT_WRAPPER_CLASS);
@@ -48,9 +69,16 @@
     }
   };
 
+  if (textAreaQuestion) {
+    textAreaQuestion.addEventListener('input', function (evt) {
+      storage.setItem(QUESTION_FIELD, String(evt.target.value));
+    });
+  }
+
   if (inputName) {
     inputName.addEventListener('input', function (evt) {
       var parent = evt.target.parentElement;
+      storage.setItem(NAME_FIELD, String(evt.target.value));
       if (evt.target.value.length > 1) {
         addValidClass(parent);
       } else {
@@ -63,6 +91,7 @@
   if (inputEmail) {
     inputEmail.addEventListener('input', function (evt) {
       var parent = evt.target.parentElement;
+      storage.setItem(EMAIL_FIELD, String(evt.target.value));
       if (validateEmail(evt.target.value)) {
         addValidClass(parent);
       } else {

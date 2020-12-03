@@ -11,10 +11,13 @@
   var main = mainPage.querySelector('.main');
 
 
-  buttonMenu.addEventListener('click', function () {
-    menu.classList.toggle(MAIN_NAV_MENU_CLOSE_CLASS);
-    main.classList.toggle(MAIN_CLOSE_CLASS);
-    mainPage.classList.toggle(MAIN_PAGE_MENU_OPEN_CLASS);
-    buttonMenu.classList.toggle(MENU_BUTTON_OPENED_CLASS);
-  });
+  if (buttonMenu) {
+    buttonMenu.addEventListener('click', function () {
+      menu.classList.toggle(MAIN_NAV_MENU_CLOSE_CLASS);
+      main.classList.toggle(MAIN_CLOSE_CLASS);
+      mainPage.classList.toggle(MAIN_PAGE_MENU_OPEN_CLASS);
+      buttonMenu.classList.toggle(MENU_BUTTON_OPENED_CLASS);
+    });
+  }
+
 })();

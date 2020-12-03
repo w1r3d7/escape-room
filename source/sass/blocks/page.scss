@@ -1,5 +1,6 @@
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +16,6 @@
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center center;
 }
 
@@ -29,25 +29,10 @@
   }
 }
 
-.page--menu-open {
-  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
-
-
-  .page__header {
-    margin-bottom: 0;
-  }
-
-  .page__footer {
-    display: block;
-  }
-}
-
-
 .page--maniac {
   background-image: url("../img/maniac-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center center;
 
   @include media-tablet {
@@ -70,5 +55,48 @@
       url("../img/old-mansion-bg.jpg");
     background-size: cover;
     background-position: 20% center;
+  }
+}
+
+.page--ritual {
+  background-image: url("../img/ritual-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  @include media-tablet {
+    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+      url("../img/ritual-bg.jpg");
+    background-size: cover;
+    background-position: 20% center;
+  }
+}
+
+.page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  @include media-tablet {
+    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+      url("../img/fatal-experiment-bg.jpg");
+    background-size: cover;
+    background-position: 20% center;
+  }
+}
+
+.page--menu-open {
+  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
+
+
+  .page__header {
+    margin-bottom: 0;
+  }
+
+  .page__footer {
+    display: block;
   }
 }

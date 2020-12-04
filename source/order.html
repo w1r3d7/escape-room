@@ -10,13 +10,13 @@
   <link rel="preload" href="fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
   <link rel="preload" href="fonts/Raleway-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
   <link rel="stylesheet" href="css/style.css">
-  <title>Квест Маньяк</title>
+  <title>Заказ квеста</title>
 </head>
 <body>
   <div class="visually-hidden">
     <include src="build/img/sprite_auto.svg"></include>
   </div>
-  <div class="page page--quest page--maniac">
+  <div class="page page--order">
     <header class="page__header header">
       <div class="header__container container">
         <nav class="header__main-nav main-nav">
@@ -57,35 +57,58 @@
         </nav>
       </div>
     </header>
-    <main class="page__main main main--quest-page">
-      <a class="main__all-quests-link" href="quests.html">
-        <svg width="6" height="10">
-          <use xlink:href="#arrow" fill="none"></use>
-        </svg>Все квесты</a>
-      <div class="main__quest quest">
-        <span class="quest__genre">хоррор, триллер</span>
+    <main class="page__main main main--order-page">
+      <div class="main__order order">
+        <span class="order__description">выбранный квест</span>
         <h1>Маньяк</h1>
-        <div class="quest__info">
-          <span>
-            <svg width="20" height="20">
-              <use xlink:href="#clock"></use>
-            </svg>
-            60 мин
-          </span>
-          <span>
-            <svg width="16" height="21" viewBox="0 0 13 16" fill="none">
-              <use xlink:href="#person"></use>
-            </svg>
-            3-4 чел
-          </span>
-          <span>
-            <svg width="21" height="21" viewBox="0 0 16 16">
-              <use xlink:href="#puzzle"></use>
-            </svg>средняя сложность
-          </span>
+        <hr>
+        <div class="order__date-picker">
+          <span>Выберите дату</span>
+          <time datetime="2012-03-22"><a href="#">22 марта</a></time>
         </div>
-        <p>В комнате с приглушённым светом несколько человек, незнакомых друг с другом, приходят в себя. Никто не помнит, что произошло прошлым вечером. Руки и ноги связаным, но одному из вас получилось освободиться. На стене висит пугающий таймер и запущен отстёт 60&nbsp;минут. Сможете ли вы разобраться в стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
-        <a class="quest__btn btn" href="order.html">Забронировать</a>
+        <ul class="order__prompt">
+          <li class="order__prompt-item order__prompt-item--empty">— сводобно</li>
+          <li class="order__prompt-item order__prompt-item--busy">— занято</li>
+          <li class="order__prompt-item order__prompt-item--checked">— выбрано вами</li>
+        </ul>
+        <form class="order__form">
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="9-45">
+            <label for="9-45">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="11-00">
+            <label for="11-00">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="12-15">
+            <label for="12-15">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="13-30">
+            <label for="13-30">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="14-45">
+            <label for="14-45">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="9:45">
+            <label for="9:45">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="9:45">
+            <label for="9:45">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="9:45">
+            <label for="9:45">1400 ₽</label>
+          </div>
+          <div class="order__input-wrapper">
+            <input class="visually-hidden" type="radio" name="time" id="9:45">
+            <label for="9:45">1400 ₽</label>
+          </div>
+        </form>
       </div>
     </main>
     <footer class="page__footer footer">

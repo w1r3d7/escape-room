@@ -81,10 +81,19 @@
 
 .footer__social-item--instagram a {
   background-image: url("../img/instagram.svg");
+}
 
+.webp .footer__social-item--instagram a {
   &:hover,
   &:focus {
-    background-image: url("../img/instagram-hover.svg");
+    background-image: url("../img/instagram-hover.webp");
+  }
+}
+
+.no-webp .footer__social-item--instagram a {
+  &:hover,
+  &:focus {
+    background-image: url("../img/instagram-hover.png");
   }
 }
 

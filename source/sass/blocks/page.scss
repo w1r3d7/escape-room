@@ -233,6 +233,28 @@
   }
 }
 
+.page--order {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.webp .page--order {
+  background-image: url("../img/maniac-order-bg.webp");
+
+  @include retina {
+    background-image: url("../img/maniac-order-bg@2x.webp");
+  }
+}
+
+.no-webp .page--order {
+  background-image: url("../img/maniac-order-bg.jpg");
+
+  @include retina {
+    background-image: url("../img/maniac-order-bg@2x.jpg");
+  }
+}
+
 .webp .page--menu-open,
 .no-webp .page--menu-open {
   background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);

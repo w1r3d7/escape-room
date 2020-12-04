@@ -941,13 +941,6 @@ input[type="radio"].visually-hidden {
       text-align: left;
       margin-bottom: 41px; } }
 
-.main--quest-page {
-  margin-top: 73px;
-  margin-bottom: auto; }
-  @media (max-width: 1023px) {
-    .main--quest-page {
-      margin-top: 7px; } }
-
 .main__all-quests-link {
   display: none;
   padding-left: 16px;

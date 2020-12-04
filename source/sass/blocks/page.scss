@@ -13,10 +13,25 @@
 }
 
 .page--main {
-  background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.webp .page--main {
+  background-image: url("../img/main-bg.webp");
+
+  @include retina {
+    background-image: url("../img/main-bg@2x.webp");
+  }
+}
+
+.no-webp .page--main {
+  background-image: url("../img/main-bg.jpg");
+
+  @include retina {
+    background-image: url("../img/main-bg@2x.jpg");
+  }
 }
 
 .page--quests {
@@ -30,18 +45,55 @@
 }
 
 .page--maniac {
-  background-image: url("../img/maniac-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.webp .page--maniac {
+  background-image: url("../img/maniac-bg.webp");
+
+  @include retina {
+    background-image: url("../img/maniac-bg@2x.webp");
+  }
+
+  @include media-tablet {
+    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+      url("../img/maniac-bg.webp");
+    background-size: cover;
+    background-position: 20% center;
+
+    @include retina {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+        url("../img/maniac-bg@2x.webp");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
+  }
+}
+
+.no-webp .page--maniac {
+  background-image: url("../img/maniac-bg.jpg");
+
+  @include retina {
+    background-image: url("../img/maniac-bg@2x.jpg");
+  }
 
   @include media-tablet {
     background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
       url("../img/maniac-bg.jpg");
-    background-size: cover;
+    background-size: auto 100%;
     background-position: 20% center;
+
+    @include retina {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+        url("../img/maniac-bg@2x.jpg");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
   }
 }
+
 
 .page--old-mansion {
   background-image: url("../img/old-mansion-bg.jpg");
@@ -73,24 +125,60 @@
   }
 }
 
+
 .page--fatal-experiment {
-  background-image: url("../img/fatal-experiment-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/fatal-experiment-bg.jpg");
     background-size: cover;
     background-position: 20% center;
   }
 }
 
-.page--menu-open {
-  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
+.no-webp .page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.jpg");
 
+  @include retina {
+    background-image: url("../img/fatal-experiment-bg@2x.jpg");
+  }
+
+  @include media-tablet {
+    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+      url("../img/fatal-experiment-bg.jpg");
+
+    @include retina {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+        url("../img/fatal-experiment-bg@2x.jpg");
+      background-size: auto 100%;
+    }
+  }
+}
+
+.webp .page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.webp");
+
+  @include retina {
+    background-image: url("../img/fatal-experiment-bg@2x.webp");
+  }
+
+  @include media-tablet {
+    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+      url("../img/fatal-experiment-bg.webp");
+
+    @include retina {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
+        url("../img/fatal-experiment-bg@2x.webp");
+      background-size: auto 100%;
+    }
+  }
+}
+
+.webp .page--menu-open,
+.no-webp .page--menu-open {
+  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
 
   .page__header {
     margin-bottom: 0;

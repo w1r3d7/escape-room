@@ -78,11 +78,21 @@
   var validateForm = function () {
     var isValid = true;
 
-    Array.prototype.forEach.call(inputWrappers, function (it) {
-      if (!it.classList.contains(VALID_INPUT_WRAPPER_CLASS)) {
-        isValid = false;
-      }
-    });
+    var emailFieldParent = inputEmail.parentElement;
+    if (validateEmail(inputEmail.value)) {
+      addValidClass(emailFieldParent);
+    } else {
+      addInvalidClass(emailFieldParent);
+      isValid = false;
+    }
+
+    var nameFiledParent = inputName.parentElement;
+    if (inputName.value.length > 1) {
+      addValidClass(nameFiledParent);
+    } else {
+      addInvalidClass(nameFiledParent);
+      isValid = false;
+    }
 
     if (!inputAgreement.checked) {
       isValid = false;
@@ -93,6 +103,10 @@
     }
   };
 
+  if (emailField || questionField || nameField) {
+    validateForm();
+  }
+
   if (textAreaQuestion) {
     textAreaQuestion.addEventListener('input', function (evt) {
       storage.setItem(QUESTION_FIELD, String(evt.target.value));
@@ -101,26 +115,14 @@
 
   if (inputName) {
     inputName.addEventListener('input', function (evt) {
-      var parent = evt.target.parentElement;
       storage.setItem(NAME_FIELD, String(evt.target.value));
-      if (evt.target.value.length > 1) {
-        addValidClass(parent);
-      } else {
-        addInvalidClass(parent);
-      }
       validateForm();
     });
   }
 
   if (inputEmail) {
     inputEmail.addEventListener('input', function (evt) {
-      var parent = evt.target.parentElement;
       storage.setItem(EMAIL_FIELD, String(evt.target.value));
-      if (validateEmail(evt.target.value)) {
-        addValidClass(parent);
-      } else {
-        addInvalidClass(parent);
-      }
       validateForm();
     });
   }
@@ -142,6 +144,10 @@
       popup.classList.add(POPUP_CLOSE_CLASS);
       popupWrapper.classList.add(POPUP_WRAPPER_CLOSE_CLASS);
       document.querySelector('body').classList.remove(SCROLL_LOCK_CLASS);
+
+      storage.removeItem(EMAIL_FIELD);
+      storage.removeItem(NAME_FIELD);
+      storage.removeItem(QUESTION_FIELD);
     });
   }
 })();

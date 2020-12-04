@@ -458,10 +458,21 @@ input[type="radio"].visually-hidden {
       display: none; } }
 
 .page--main {
-  background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
+
+.webp .page--main {
+  background-image: url("../img/main-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .page--main {
+      background-image: url("../img/main-bg@2x.webp"); } }
+
+.no-webp .page--main {
+  background-image: url("../img/main-bg.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .page--main {
+      background-image: url("../img/main-bg@2x.jpg"); } }
 
 .page--quests {
   background: -webkit-gradient(linear, left bottom, left top, from(#141414), to(#1f1d1d));
@@ -472,14 +483,40 @@ input[type="radio"].visually-hidden {
     bottom: 0; }
 
 .page--maniac {
-  background-image: url("../img/maniac-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
+
+.webp .page--maniac {
+  background-image: url("../img/maniac-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .page--maniac {
+      background-image: url("../img/maniac-bg@2x.webp"); } }
   @media (max-width: 1023px) {
-    .page--maniac {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/maniac-bg.jpg");
+    .webp .page--maniac {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/maniac-bg.webp");
       background-size: cover;
+      background-position: 20% center; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .webp .page--maniac {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/maniac-bg@2x.webp");
+      background-size: auto 100%;
+      background-position: 20% center; } }
+
+.no-webp .page--maniac {
+  background-image: url("../img/maniac-bg.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .page--maniac {
+      background-image: url("../img/maniac-bg@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .no-webp .page--maniac {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/maniac-bg.jpg");
+      background-size: auto 100%;
+      background-position: 20% center; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .no-webp .page--maniac {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/maniac-bg@2x.jpg");
+      background-size: auto 100%;
       background-position: 20% center; } }
 
 .page--old-mansion {
@@ -507,22 +544,49 @@ input[type="radio"].visually-hidden {
       background-position: 20% center; } }
 
 .page--fatal-experiment {
-  background-image: url("../img/fatal-experiment-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center; }
   @media (max-width: 1023px) {
     .page--fatal-experiment {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg.jpg");
       background-size: cover;
       background-position: 20% center; } }
 
-.page--menu-open {
+.no-webp .page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .page--fatal-experiment {
+      background-image: url("../img/fatal-experiment-bg@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .no-webp .page--fatal-experiment {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .no-webp .page--fatal-experiment {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg@2x.jpg");
+      background-size: auto 100%; } }
+
+.webp .page--fatal-experiment {
+  background-image: url("../img/fatal-experiment-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .page--fatal-experiment {
+      background-image: url("../img/fatal-experiment-bg@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .webp .page--fatal-experiment {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .webp .page--fatal-experiment {
+      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), url("../img/fatal-experiment-bg@2x.webp");
+      background-size: auto 100%; } }
+
+.webp .page--menu-open,
+.no-webp .page--menu-open {
   background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%); }
-  .page--menu-open .page__header {
+  .webp .page--menu-open .page__header,
+  .no-webp .page--menu-open .page__header {
     margin-bottom: 0; }
-  .page--menu-open .page__footer {
+  .webp .page--menu-open .page__footer,
+  .no-webp .page--menu-open .page__footer {
     display: block; }
 
 .header {
@@ -695,7 +759,6 @@ input[type="radio"].visually-hidden {
       margin-right: 0;
       margin-bottom: 20px;
       -ms-flex-item-align: center;
-          -ms-grid-row-align: center;
           align-self: center; } }
 
 .man-nav__menu-toggle {

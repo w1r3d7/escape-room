@@ -58,14 +58,12 @@
   }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/maniac-bg.webp");
+    background: $quest-background, url("../img/maniac-bg.webp");
     background-size: cover;
     background-position: 20% center;
 
     @include retina {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-        url("../img/maniac-bg@2x.webp");
+      background: $quest-background, url("../img/maniac-bg@2x.webp");
       background-size: auto 100%;
       background-position: 20% center;
     }
@@ -80,14 +78,12 @@
   }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/maniac-bg.jpg");
+    background: $quest-background, url("../img/maniac-bg.jpg");
     background-size: auto 100%;
     background-position: 20% center;
 
     @include retina {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-        url("../img/maniac-bg@2x.jpg");
+      background: $quest-background, url("../img/maniac-bg@2x.jpg");
       background-size: auto 100%;
       background-position: 20% center;
     }
@@ -96,46 +92,105 @@
 
 
 .page--old-mansion {
-  background-image: url("../img/old-mansion-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+}
+
+.webp .page--old-mansion {
+  background-image: url("../img/old-mansion-bg.webp");
+
+  @include retina {
+    background-image: url("../img/old-mansion-bg@2x.webp");
+  }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/old-mansion-bg.jpg");
+    background: $quest-background, url("../img/old-mansion-bg.webp");
     background-size: cover;
     background-position: 20% center;
+
+    @include retina {
+      background: $quest-background, url("../img/old-mansion-bg@2x.webp");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
+  }
+}
+
+.no-webp .page--old-mansion {
+  background-image: url("../img/old-mansion-bg.jpg");
+
+  @include retina {
+    background-image: url("../img/old-mansion-bg@2x.jpg");
+  }
+
+  @include media-tablet {
+    background: $quest-background, url("../img/old-mansion-bg.jpg");
+    background-size: auto 100%;
+    background-position: 20% center;
+
+    @include retina {
+      background: $quest-background, url("../img/old-mansion-bg@2x.jpg");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
   }
 }
 
 .page--ritual {
-  background-image: url("../img/ritual-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+}
+
+.webp .page--ritual {
+  background-image: url("../img/ritual-bg.webp");
+
+  @include retina {
+    background-image: url("../img/ritual-bg@2x.webp");
+  }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/ritual-bg.jpg");
+    background: $quest-background, url("../img/ritual-bg.webp");
     background-size: cover;
     background-position: 20% center;
+
+    @include retina {
+      background: $quest-background, url("../img/ritual-bg@2x.webp");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
   }
 }
 
+.no-webp .page--ritual {
+  background-image: url("../img/ritual-bg.jpg");
+
+  @include retina {
+    background-image: url("../img/ritual-bg@2x.jpg");
+  }
+
+  @include media-tablet {
+    background: $quest-background, url("../img/ritual-bg.jpg");
+    background-size: auto 100%;
+    background-position: 20% center;
+
+    @include retina {
+      background: $quest-background,
+        url("../img/ritual-bg@2x.jpg");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
+  }
+}
 
 .page--fatal-experiment {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-
-  @include media-tablet {
-    background-size: cover;
-    background-position: 20% center;
-  }
 }
 
 .no-webp .page--fatal-experiment {
@@ -146,13 +201,14 @@
   }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/fatal-experiment-bg.jpg");
+    background: $quest-background, url("../img/fatal-experiment-bg.jpg");
+    background-size: auto 100%;
+    background-position: 20% center;
 
     @include retina {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-        url("../img/fatal-experiment-bg@2x.jpg");
+      background: $quest-background, url("../img/fatal-experiment-bg@2x.jpg");
       background-size: auto 100%;
+      background-position: 20% center;
     }
   }
 }
@@ -165,13 +221,14 @@
   }
 
   @include media-tablet {
-    background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-      url("../img/fatal-experiment-bg.webp");
+    background: $quest-background, url("../img/fatal-experiment-bg.webp");
+    background-size: auto 100%;
+    background-position: 20% center;
 
     @include retina {
-      background: linear-gradient(167.98deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%),
-        url("../img/fatal-experiment-bg@2x.webp");
+      background: $quest-background, url("../img/fatal-experiment-bg@2x.webp");
       background-size: auto 100%;
+      background-position: 20% center;
     }
   }
 }

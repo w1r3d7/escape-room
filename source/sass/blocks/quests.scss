@@ -83,7 +83,7 @@
     height: 232px;
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     left: 0;

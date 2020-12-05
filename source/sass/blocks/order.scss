@@ -1,4 +1,9 @@
+.order {
+  position: relative;
+}
+
 .order__description {
+  display: block;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -7,12 +12,83 @@
 
 .order h1 {
   margin-left: 0;
+  margin-right: 80px;
   margin-bottom: 16px;
   font-size: 92px;
   line-height: 87px;
   letter-spacing: -0.03em;
   font-weight: 900;
   text-transform: uppercase;
+
+  @include media-mobile {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+
+.order__picked-quest {
+  position: absolute;
+  display: flex;
+  top: 22px;
+  left: 54%;
+  justify-content: space-between;
+  height: 68px;
+  width: 40%;
+
+  @include media-mobile {
+    position: inherit;
+    flex-direction: column;
+    margin-bottom: 40px;
+    left: 0;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.order__picked-quest--close {
+  display: none;
+}
+
+.order__picked-quest button {
+  display: block;
+  align-self: flex-end;
+  padding: 0;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $orange;
+  color: $white;
+
+  @include media-mobile {
+    align-self: flex-start;
+  }
+}
+
+.order__picked-quest p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+
+  @include media-mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.order__picked-quest-title,
+.order__picked-quest-date {
+  display: block;
+
+  @include media-mobile {
+    display: inline;
+  }
+}
+
+.order__picked-quest-price-wrapper {
+  @include media-mobile {
+    display: block;
+  }
 }
 
 .order hr {
@@ -23,31 +99,39 @@
 }
 
 .order__date-picker {
+  display: flex;
+  align-items: flex-end;
   margin-left: 46px;
   margin-bottom: 27px;
+  min-height: 40px;
 
   @include media-tablet {
     margin-left: 0;
   }
 
-  span {
-    padding-right: 10px;
-    padding-bottom: 5px;
-    margin-right: 24px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 0em;
-    border-bottom: 2px solid $orange;
-  }
-
-  time a {
+  time {
     font-size: 28px;
     font-weight: 800;
     line-height: 40px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     color: $white;
   }
+}
+
+.order__date-picker--close time {
+  display: none;
+}
+
+.order__date-pick {
+  padding-right: 10px;
+  padding-bottom: 5px;
+  margin-right: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0;
+  border-bottom: 2px solid $orange;
+  color: $white;
 }
 
 .order__prompt {
@@ -62,8 +146,12 @@
   }
 
   :last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
+}
+
+.order__prompt--close {
+  display: none;
 }
 
 .order__prompt-item {
@@ -71,6 +159,9 @@
   align-items: center;
   padding-left: 18px;
   margin-right: 23px;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 500;
   position: relative;
 
   &::before {
@@ -84,13 +175,14 @@
   }
 }
 
-.order form {
+.order-inputs-wrapper {
   display: grid;
   width: 82%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 32px;
   margin-left: 46px;
+  margin-bottom: 40px;
 
   @include media-tablet {
     grid-template-columns: 1fr 1fr 1fr;
@@ -105,15 +197,19 @@
   }
 }
 
-.order__prompt-item--empty:before {
+.order-inputs-wrapper--close {
+  display: none;
+}
+
+.order__prompt-item--empty::before {
   border: 2px solid $gray;
 }
 
-.order__prompt-item--busy:before {
+.order__prompt-item--busy::before {
   background: $busy-order-time;
 }
 
-.order__prompt-item--checked:before {
+.order__prompt-item--checked::before {
   background: $selected-order-time;
 }
 

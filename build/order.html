@@ -58,27 +58,27 @@
       </div>
     </header>
     <main class="page__main main main--order-page">
-      <div class="main__order order">
+      <form class="main__order order">
         <span class="order__description">выбранный квест</span>
         <h1>Маньяк</h1>
         <hr>
-        <div class="order__date-picker">
-          <span>Выберите дату</span>
-          <time datetime="2012-03-22"><a href="#">22 марта</a></time>
+        <div class="order__date-picker order__date-picker--close">
+          <a class="order__date-pick" href="#">Выберите дату</a>
+          <time datetime="2012-03-22">22 марта</time>
         </div>
-        <ul class="order__prompt">
+        <ul class="order__prompt order__prompt--close">
           <li class="order__prompt-item order__prompt-item--empty">— сводобно</li>
           <li class="order__prompt-item order__prompt-item--busy">— занято</li>
           <li class="order__prompt-item order__prompt-item--checked">— выбрано вами</li>
         </ul>
-        <form>
+        <div class="order-inputs-wrapper order-inputs-wrapper--close">
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="9-45">
+            <input class="visually-hidden" type="radio" name="time" id="9-45" value="9:45">
             <label for="9-45">9:45</label>
             <span>1400 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="11-00">
+            <input class="visually-hidden" type="radio" name="time" id="11-00" value="11:00">
             <label for="11-00">11:00</label>
             <span>1400 ₽</span>
           </div>
@@ -88,52 +88,60 @@
             <span>1400 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="13-30" disabled="">
+            <input class="visually-hidden" type="radio" name="time" id="13-30" value="13:30" disabled="">
             <label for="13-30">13:30</label>
             <span>1400 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="14-45">
+            <input class="visually-hidden" type="radio" name="time" id="14-45" value="14:45">
             <label for="14-45">14:45</label>
             <span>1400 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="16-00">
+            <input class="visually-hidden" type="radio" name="time" id="16-00" value="16:00">
             <label for="16-00">16:00</label>
             <span>1500 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="17-15" disabled="">
+            <input class="visually-hidden" type="radio" name="time" id="17-15" value="17:15" disabled="">
             <label for="17-15">17:15</label>
             <span>1500 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="18-30">
+            <input class="visually-hidden" type="radio" name="time" id="18-30" value="18:30">
             <label for="18-30">18:30</label>
             <span>1500 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="19-45">
+            <input class="visually-hidden" type="radio" name="time" id="19-45" value="19:45">
             <label for="19-45">19:45</label>
             <span>1500 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="21-00">
+            <input class="visually-hidden" type="radio" name="time" id="21-00" value="21:00">
             <label for="21-00">21:00</label>
             <span>1800 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="22-15" disabled="">
+            <input class="visually-hidden" type="radio" name="time" id="22-15" value="22:15" disabled="">
             <label for="22-15">22:15</label>
             <span>1800 ₽</span>
           </div>
           <div class="order__input-wrapper">
-            <input class="visually-hidden" type="radio" name="time" id="23-30" disabled="">
+            <input class="visually-hidden" type="radio" name="time" id="23-30" value="23:30" disabled="">
             <label for="23-30">23:30</label>
             <span>2000 ₽</span>
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="order__picked-quest order__picked-quest--close">
+          <p>
+            <span class="order__picked-quest-title">Вы выбрали игру</span>
+            <span class="order__picked-quest-date"></span>
+            <span class="order__picked-quest-price-wrapper">К оплате <span class="order__picked-quest-price"></span></span>
+          </p>
+          <button type="submit">Перейти к оплате</button>
+        </div>
+      </form>
     </main>
     <footer class="page__footer footer">
       <div class="footer__container container">

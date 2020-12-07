@@ -1317,6 +1317,20 @@ input[type="radio"].visually-hidden {
     color: #9c9c9c; }
   .popup__wrapper-input input {
     padding: 10px; }
+  .popup__wrapper-input input:not(:-moz-placeholder-shown) + span {
+    transform: translateY(-170%);
+    background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    line-height: 17px; }
+  .popup__wrapper-input input:not(:-ms-input-placeholder) + span {
+    transform: translateY(-170%);
+    background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    line-height: 17px; }
   .popup__wrapper-input input:focus + span,
   .popup__wrapper-input input:not(:placeholder-shown) + span {
     -webkit-transform: translateY(-170%);

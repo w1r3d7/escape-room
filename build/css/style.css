@@ -889,9 +889,6 @@ input[type="radio"].visually-hidden {
   height: 16px;
   background-image: url("../img/close.svg"); }
 
-.main--close {
-  display: none; }
-
 .main h1 {
   margin: 0;
   margin-left: 8%;
@@ -1029,6 +1026,9 @@ input[type="radio"].visually-hidden {
       margin-top: 54px;
       padding-right: 16px;
       padding-left: 16px; } }
+
+.main--close {
+  display: none; }
 
 .footer {
   padding-bottom: 24px; }

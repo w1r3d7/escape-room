@@ -245,6 +245,18 @@
   @include retina {
     background-image: url("../img/maniac-order-bg@2x.webp");
   }
+
+  @include media-mobile {
+    background: $quest-background, url("../img/maniac-order-bg.webp");
+    background-size: auto 100%;
+    background-position: 20% center;
+
+    @include retina {
+      background: $quest-background, url("../img/maniac-order-bg@2x.webp");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
+  }
 }
 
 .no-webp .page--order {
@@ -252,6 +264,18 @@
 
   @include retina {
     background-image: url("../img/maniac-order-bg@2x.jpg");
+  }
+
+  @include media-mobile {
+    background: $quest-background, url("../img/maniac-order-bg.jpg");
+    background-size: auto 100%;
+    background-position: 20% center;
+
+    @include retina {
+      background: $quest-background, url("../img/maniac-order-bg@2x.jpg");
+      background-size: auto 100%;
+      background-position: 20% center;
+    }
   }
 }
 

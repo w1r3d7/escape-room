@@ -6,16 +6,18 @@
   var ORDER_PICKED_QUEST_CLOSE_CLASS = 'order__picked-quest--close';
 
   var order = document.querySelector('.order');
-  var orderDatePicker = order.querySelector('.order__date-picker');
-  var pickDateButton = orderDatePicker.querySelector('.order__date-pick');
-  var orderPrompt = order.querySelector('.order__prompt');
-  var orderInputsWrapper = order.querySelector('.order-inputs-wrapper');
-  var formInputs = orderInputsWrapper.querySelectorAll('input');
-  var orderDate = order.querySelector('.order__date-picker').querySelector('time').textContent;
-  var orderPickedQuest = order.querySelector('.order__picked-quest');
-  var orderPickedTime = orderPickedQuest.querySelector('.order__picked-quest-date');
-  var orderPicketPrice = orderPickedQuest.querySelector('.order__picked-quest-price');
-  var submitButton = order.querySelector('button[type=submit]');
+  if (order) {
+    var orderDatePicker = order.querySelector('.order__date-picker');
+    var pickDateButton = orderDatePicker.querySelector('.order__date-pick');
+    var orderPrompt = order.querySelector('.order__prompt');
+    var orderInputsWrapper = order.querySelector('.order-inputs-wrapper');
+    var formInputs = orderInputsWrapper.querySelectorAll('input');
+    var orderDate = order.querySelector('.order__date-picker').querySelector('time').textContent;
+    var orderPickedQuest = order.querySelector('.order__picked-quest');
+    var orderPickedTime = orderPickedQuest.querySelector('.order__picked-quest-date');
+    var orderPicketPrice = orderPickedQuest.querySelector('.order__picked-quest-price');
+    var submitButton = order.querySelector('button[type=submit]');
+  }
 
   var openTimePicker = function () {
     orderDatePicker.classList.remove(DATE_PICKER_CLOSE_CLASS);

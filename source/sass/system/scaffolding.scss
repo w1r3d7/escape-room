@@ -3,6 +3,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 360px;
   font-family: $main-font;
   background: $background-gradient;

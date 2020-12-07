@@ -17,6 +17,12 @@
   }
 }
 
+.main--main-page {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
 .main--main-page h1 {
   margin-bottom: 30px;
   width: 544px;
@@ -29,6 +35,8 @@
 }
 
 .main--main-page .main__container {
+  width: 100%;
+
   @include media-mobile {
     display: flex;
     flex-direction: column;
@@ -89,9 +97,11 @@
 
 .main__quests {
   margin-left: 8%;
+  margin-right: 8%;
 
   @include media-tablet {
     margin-left: 0;
+    margin-right: 0;
     width: 100%;
   }
 }
@@ -118,6 +128,7 @@
   @include media-tablet {
     display: block;
     margin-bottom: 286px;
+    margin-top: 6px;
   }
 
   svg {
@@ -131,10 +142,11 @@
   padding-left: 136px;
   padding-right: 150px;
   margin: 0 auto;
-  margin-top: 64px;
+  margin-top: 61px;
   margin-bottom: auto;
 
   @include media-tablet {
+    margin-top: 54px;
     padding-right: 16px;
     padding-left: 16px;
   }

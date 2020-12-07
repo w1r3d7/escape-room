@@ -2,14 +2,12 @@
   @include ul-reset;
 
   display: flex;
-  width: 82%;
   margin-bottom: 45px;
-  justify-content: space-between;
 
   @include media-tablet {
     width: 100%;
     margin-bottom: 41px;
-    overflow-x: scroll;
+    overflow: scroll;
   }
 
   :first-child {
@@ -23,8 +21,8 @@
 }
 
 .quests__filter__item {
-  padding-right: 44px;
-  padding-left: 38px;
+  padding-right: 4%;
+  padding-left: 3.5%;
   border-right: 1px solid rgba(255, 255, 255, 0.32);
 
   @include media-tablet {
@@ -59,12 +57,11 @@
 .quests__list {
   @include ul-reset;
 
-  width: 93%;
   overflow-y: scroll;
   height: 55vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @include media-tablet {
     width: 100%;
@@ -81,6 +78,7 @@
   @include media-tablet {
     width: 328px;
     height: 232px;
+    margin-bottom: 0;
   }
 
   &::before {

@@ -61,6 +61,14 @@
       <form class="main__order order">
         <span class="order__description">выбранный квест</span>
         <h1>Маньяк</h1>
+        <div class="order__picked-quest order__picked-quest--close">
+          <p>
+            <span class="order__picked-quest-title">Вы выбрали игру</span>
+            <span class="order__picked-quest-date"></span>
+            <span class="order__picked-quest-price-wrapper">К оплате <span class="order__picked-quest-price"></span></span>
+          </p>
+          <button type="submit">Перейти к оплате</button>
+        </div>
         <hr>
         <div class="order__date-picker order__date-picker--close">
           <a class="order__date-pick" href="#">Выберите дату</a>
@@ -84,7 +92,7 @@
           </div>
           <div class="order__input-wrapper">
             <input class="visually-hidden" type="radio" name="time" id="12-15" disabled>
-            <label for="12-15">12-15</label>
+            <label for="12-15">12:15</label>
             <span>1400 ₽</span>
           </div>
           <div class="order__input-wrapper">
@@ -132,14 +140,6 @@
             <label for="23-30">23:30</label>
             <span>2000 ₽</span>
           </div>
-        </div>
-        <div class="order__picked-quest order__picked-quest--close">
-          <p>
-            <span class="order__picked-quest-title">Вы выбрали игру</span>
-            <span class="order__picked-quest-date"></span>
-            <span class="order__picked-quest-price-wrapper">К оплате <span class="order__picked-quest-price"></span></span>
-          </p>
-          <button type="submit">Перейти к оплате</button>
         </div>
       </form>
     </main>

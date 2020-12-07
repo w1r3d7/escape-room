@@ -17,35 +17,10 @@
   padding: 0;
 }
 
-@mixin nav-header-desktop {
-  font-size: 14px;
-  line-height: 117%;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-@mixin text-caption {
-  font-size: 12px;
-  line-height: 17px;
-  font-weight: 500;
-}
-
 @mixin button-reset {
   padding: 0;
   border: none;
   background-color: transparent;
-}
-
-@mixin btn-caps {
-  font-size: 17px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-
-  @include media-mobile {
-    font-size: 14px;
-    line-height: 16px;
-  }
 }
 
 @mixin media-tablet {

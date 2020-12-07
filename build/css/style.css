@@ -390,10 +390,6 @@ a {
       padding-right: 16px; } }
 
 .btn {
-  font-size: 17px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,17 +406,18 @@ a {
   border-radius: 65px;
   background-color: #f2890f;
   line-height: 65px;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: #ffffff; }
-  @media (max-width: 767px) {
-    .btn {
-      font-size: 14px;
-      line-height: 16px; } }
   .btn:hover {
     background-color: #f39425; }
   @media (max-width: 767px) {
     .btn {
       width: 185px;
       min-height: 47px;
+      font-size: 14px;
       line-height: 47px; } }
 
 .scroll-lock {
@@ -1078,10 +1075,10 @@ input[type="radio"].visually-hidden {
       height: 36px; } }
 
 .footer__ask-question {
+  position: relative;
   font-size: 12px;
   line-height: 17px;
   font-weight: 500;
-  position: relative;
   color: #c6c4c2;
   border-bottom: 1px dashed #c6c4c2; }
   .footer__ask-question::before {
@@ -1280,8 +1277,9 @@ input[type="radio"].visually-hidden {
   border-radius: 3px;
   outline: none;
   color: #c6c4c2; }
-  .popup__wrapper--ask-question input:hover,
-  .popup__wrapper--ask-question textarea:hover {
+  .popup__wrapper--ask-question input:hover, .popup__wrapper--ask-question input:focus,
+  .popup__wrapper--ask-question textarea:hover,
+  .popup__wrapper--ask-question textarea:focus {
     border-color: #ffffff; }
 
 .popup__wrapper--ask-question textarea {
@@ -1356,6 +1354,10 @@ input[type="radio"].visually-hidden {
     background-color: #f2890f;
     border-radius: 4px;
     opacity: 0.4; }
+
+.popup__agreement input:focus + label::before,
+.popup__agreement input:hover + label::before {
+  opacity: 0.8; }
 
 .popup__agreement input:checked + label::before {
   opacity: 1;
@@ -1763,6 +1765,7 @@ input[type="radio"].visually-hidden {
   display: block;
   margin: 0;
   margin-bottom: 27px;
+  margin-top: 15px;
   opacity: 0.25;
   color: #c6c4c2; }
 
@@ -2056,6 +2059,12 @@ input[type="radio"].visually-hidden {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+  .order__input-wrapper label:hover, .order__input-wrapper label:focus {
+    border-color: #f2890f; }
+
+.order__input-wrapper input:focus + label,
+.order__input-wrapper input:hover + label {
+  border-color: #f2890f; }
 
 .order__input-wrapper input:checked + label {
   border: none;

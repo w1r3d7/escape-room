@@ -129,6 +129,7 @@
   display: block;
   margin: 0;
   margin-bottom: 27px;
+  margin-top: 15px;
   opacity: 0.25;
   color: $gray;
 }
@@ -290,6 +291,16 @@
   border: 2px solid $gray;
   border-radius: 65px;
   user-select: none;
+
+  &:hover,
+  &:focus {
+    border-color: $orange;
+  }
+}
+
+.order__input-wrapper input:focus + label,
+.order__input-wrapper input:hover + label {
+  border-color: $orange;
 }
 
 .order__input-wrapper input:checked + label {

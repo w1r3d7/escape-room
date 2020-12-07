@@ -44,9 +44,10 @@
 }
 
 .footer__ask-question {
-  @include text-caption;
-
   position: relative;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 500;
   color: $gray;
   border-bottom: 1px dashed $gray;
 

@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
 
-  @include nav-header-desktop;
+  font-size: 14px;
+  line-height: 117%;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 
   @include media-tablet {
     flex-direction: column;

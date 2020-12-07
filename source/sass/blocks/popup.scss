@@ -160,7 +160,8 @@
   outline: none;
   color: $gray;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $white;
   }
 }
@@ -245,6 +246,11 @@
       border-radius: 4px;
       opacity: 0.4;
     }
+  }
+
+  input:focus + label::before,
+  input:hover + label::before {
+    opacity: 0.8;
   }
 
   input:checked + label::before {

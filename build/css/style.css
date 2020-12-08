@@ -1735,7 +1735,8 @@ input[type="radio"].visually-hidden {
   font-size: 15px;
   font-weight: 500;
   line-height: 23px;
-  color: #ffffff; }
+  color: #ffffff;
+  cursor: pointer; }
   @media (max-width: 767px) {
     .order__picked-quest button {
       -ms-flex-item-align: start;

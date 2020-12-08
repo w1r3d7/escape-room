@@ -81,6 +81,7 @@
   font-weight: 500;
   line-height: 23px;
   color: $white;
+  cursor: pointer;
 
   @include media-mobile {
     align-self: flex-start;

@@ -135,16 +135,14 @@
 .main--order-page {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 136px;
-  padding-right: 150px;
-  margin: 0 auto;
-  margin-top: 61px;
-  margin-bottom: auto;
+  padding-left: 106px;
+  padding-right: 103px;
+  margin: 61px auto auto auto;
 
   @include media-tablet {
     margin-top: 54px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

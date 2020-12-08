@@ -161,7 +161,7 @@
 }
 
 
-.man-nav__menu-toggle {
+.main-nav__menu-toggle {
   display: none;
   position: relative;
   margin-top: 10px;
@@ -194,7 +194,7 @@
   }
 }
 
-.man-nav__menu-toggle--opened::after {
+.main-nav__menu-toggle--opened::after {
   width: 16px;
   height: 16px;
   background-image: url("../img/close.svg");

@@ -73,8 +73,8 @@
       input.addEventListener('change', function (evt) {
         openPickedQuest();
         orderPickedTime.textContent = orderDate + ' в ' + evt.target.value;
-        var price = evt.target.parentElement.querySelector('span').textContent;
-        orderPicketPrice.textContent = price;
+        var price = evt.target.parentElement.querySelector('span').textContent.split(' ');
+        orderPicketPrice.textContent = price[0];
       });
     });
   }

@@ -819,7 +819,11 @@ input[type="radio"].visually-hidden {
       border-bottom: 1px solid rgba(255, 255, 255, 0.15); } }
 
 .main-nav__contacts-phone {
-  color: #f0f0f0; }
+  color: #f0f0f0;
+  margin-bottom: 16px; }
+  @media (max-width: 1023px) {
+    .main-nav__contacts-phone {
+      margin-bottom: 0; } }
   .main-nav__contacts-phone:hover, .main-nav__contacts-phone:focus {
     color: #ffffff; }
 
@@ -978,15 +982,6 @@ input[type="radio"].visually-hidden {
     .main--quests-page > div > span {
       margin-left: 0;
       margin-bottom: 15px; } }
-
-.main__quests {
-  margin-left: 8%;
-  margin-right: 8%; }
-  @media (max-width: 1023px) {
-    .main__quests {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%; } }
 
 .main--quests-page h1 {
   margin-bottom: 52px; }
@@ -1210,6 +1205,8 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/close.svg");
   opacity: 0.5;
   cursor: pointer; }
+  .popup__wrapper-close-button:hover, .popup__wrapper-close-button:focus {
+    opacity: 0.8; }
 
 .popup__wrapper-location-button {
   padding: 0;
@@ -1292,7 +1289,8 @@ input[type="radio"].visually-hidden {
   min-height: 47px;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em; }
+  letter-spacing: 0.03em;
+  cursor: pointer; }
 
 .popup__submit-btn:disabled {
   background-color: #b8b8b8; }
@@ -1390,6 +1388,10 @@ input[type="radio"].visually-hidden {
   display: none;
   color: #f2890f; }
 
+.quests {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .quests__filter {
   list-style: none;
   margin: 0;
@@ -1402,7 +1404,10 @@ input[type="radio"].visually-hidden {
     .quests__filter {
       width: 100%;
       margin-bottom: 41px;
-      overflow: scroll; } }
+      overflow-x: scroll; } }
+  @media (max-width: 767px) {
+    .quests__filter {
+      margin-bottom: 24px; } }
   .quests__filter :first-child {
     padding-left: 0; }
   .quests__filter :last-child {
@@ -1442,12 +1447,20 @@ input[type="radio"].visually-hidden {
 .quests__filter__item--active span {
   border-bottom: 2px solid #f2890f; }
 
+.quests__wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 .quests__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 54vh;
+  overflow: auto;
+  padding-right: 17px;
   overflow-y: scroll;
-  height: 55vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1458,19 +1471,31 @@ input[type="radio"].visually-hidden {
           justify-content: space-between; }
   @media (max-width: 1023px) {
     .quests__list {
-      width: 100%;
-      grid-row-gap: 15px; } }
+      width: 100%; } }
+  @media (max-width: 767px) {
+    .quests__list {
+      display: block; } }
+  .quests__list::after {
+    content: "";
+    width: 344px; }
 
 .quests__item {
   position: relative;
   width: 344px;
   height: 232px;
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  margin-right: 10px; }
+  .quests__item:nth-child(3n) {
+    margin-right: 0; }
   @media (max-width: 1023px) {
     .quests__item {
       width: 328px;
       height: 232px;
-      margin-bottom: 0; } }
+      margin-bottom: 32px; } }
+  @media (max-width: 767px) {
+    .quests__item {
+      margin: 0 auto;
+      margin-bottom: 15px; } }
   .quests__item::before {
     content: "";
     position: absolute;
@@ -1484,13 +1509,10 @@ input[type="radio"].visually-hidden {
       .quests__item::before {
         bottom: 4%; } }
 
-.quests__item:last-child {
-  height: 0; }
-
 .quests__item-wrapper {
   position: absolute;
-  bottom: 19px;
-  left: 19px;
+  bottom: 20px;
+  left: 21px;
   width: 90%; }
 
 .quests__item-wrapper span {
@@ -1509,12 +1531,14 @@ input[type="radio"].visually-hidden {
   color: #ffffff; }
 
 .quests__item-wrapper address {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-size: 13px;
   line-height: 18px;
   font-weight: 500;
   font-style: normal;
   color: #c6c4c2; }
+  .quests__item-wrapper address svg {
+    margin-right: 5px; }
 
 .quests__item-wrapper svg {
   margin-right: 8px; }
@@ -1737,6 +1761,8 @@ input[type="radio"].visually-hidden {
   line-height: 23px;
   color: #ffffff;
   cursor: pointer; }
+  .order__picked-quest button:hover, .order__picked-quest button:focus {
+    color: #f2890f; }
   @media (max-width: 767px) {
     .order__picked-quest button {
       -ms-flex-item-align: start;
@@ -1820,6 +1846,8 @@ input[type="radio"].visually-hidden {
   @media (max-width: 1023px) {
     .order__date-pick {
       margin-right: 14px; } }
+  .order__date-pick:hover, .order__date-pick:focus {
+    color: #f2890f; }
   .order__date-pick::before {
     content: "";
     position: absolute;
@@ -2072,7 +2100,8 @@ input[type="radio"].visually-hidden {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  cursor: pointer; }
   .order__input-wrapper label:hover, .order__input-wrapper label:focus {
     border-color: #f2890f; }
 

@@ -16,6 +16,7 @@
 
   var askQuestionButton = document.querySelector('.footer__ask-question');
   var askQuestionPopup = popup.querySelector('.popup__wrapper--ask-question');
+  var inputName = popup.querySelector('input[name=name]');
 
   var closeAll = function () {
     popup.classList.add(POPUP_CLOSE_CLASS);
@@ -90,6 +91,7 @@
       evt.preventDefault();
       document.addEventListener('keydown', escButtonHandler);
       toggleAskQuestionPopup();
+      inputName.focus();
     });
   }
 })();

@@ -83,6 +83,11 @@
   color: $white;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
   @include media-mobile {
     align-self: flex-start;
   }
@@ -174,6 +179,11 @@
 
   @include media-tablet {
     margin-right: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
   }
 
   &::before {
@@ -293,6 +303,7 @@
   border: 2px solid $gray;
   border-radius: 65px;
   user-select: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {

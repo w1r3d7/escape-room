@@ -14,9 +14,21 @@
 }
 
 .main--main-page {
-  display: flex;
-  flex: 1;
-  align-items: center;
+  margin-top: 112px;
+  margin-bottom: auto;
+
+  @include media-mobile {
+    margin-top: auto;
+    margin-bottom: unset;
+  }
+}
+
+.main--main-page .container {
+  @include media-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .main--main-page h1 {
@@ -27,16 +39,6 @@
     width: 310px;
     margin-bottom: 34px;
     text-align: center;
-  }
-}
-
-.main--main-page .main__container {
-  width: 100%;
-
-  @include media-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -90,17 +92,6 @@
     margin-bottom: 15px;
   }
 }
-
-// .main__quests {
-//   margin-left: 8%;
-//   margin-right: 8%;
-
-//   @include media-tablet {
-//     margin-left: 0;
-//     margin-right: 0;
-//     width: 100%;
-//   }
-// }
 
 .main--quests-page h1 {
   margin-bottom: 52px;

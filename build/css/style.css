@@ -674,15 +674,16 @@ input[type="radio"].visually-hidden {
       background-size: auto 100%;
       background-position: 20% center; } }
 
-.webp .page--menu-open,
-.no-webp .page--menu-open {
-  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%); }
-  .webp .page--menu-open .page__header,
-  .no-webp .page--menu-open .page__header {
-    margin-bottom: 0; }
-  .webp .page--menu-open .page__footer,
-  .no-webp .page--menu-open .page__footer {
-    display: block; }
+@media (max-width: 1023px) {
+  .webp .page--menu-open,
+  .no-webp .page--menu-open {
+    background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%); }
+    .webp .page--menu-open .page__header,
+    .no-webp .page--menu-open .page__header {
+      margin-bottom: 0; }
+    .webp .page--menu-open .page__footer,
+    .no-webp .page--menu-open .page__footer {
+      display: block; } }
 
 .header {
   padding-top: 24px; }

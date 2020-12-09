@@ -281,13 +281,15 @@
 
 .webp .page--menu-open,
 .no-webp .page--menu-open {
-  background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
+  @include media-tablet {
+    background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
 
-  .page__header {
-    margin-bottom: 0;
-  }
+    .page__header {
+      margin-bottom: 0;
+    }
 
-  .page__footer {
-    display: block;
+    .page__footer {
+      display: block;
+    }
   }
 }

@@ -5,10 +5,10 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.8.6",
     "browser-sync": "2.26.x",
+    "del": "^6.0.0",
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
-    "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "1.2.x",
@@ -48,8 +48,5 @@
   ],
   "engines": {
     "node": "8.15"
-  },
-  "dependencies": {
-    "del": "^4.1.1"
   }
 }

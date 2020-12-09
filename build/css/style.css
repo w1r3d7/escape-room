@@ -865,8 +865,8 @@ input[type="radio"].visually-hidden {
   display: none;
   position: relative;
   margin-top: 10px;
-  margin-right: 29px;
   padding: 0;
+  padding-right: 29px;
   border: none;
   background-color: transparent;
   text-transform: uppercase;
@@ -874,10 +874,12 @@ input[type="radio"].visually-hidden {
   cursor: pointer; }
   .main-nav__menu-toggle:hover, .main-nav__menu-toggle:focus {
     color: #ffffff; }
+    .main-nav__menu-toggle:hover::after, .main-nav__menu-toggle:focus::after {
+      opacity: 0.5; }
   .main-nav__menu-toggle::after {
     content: "";
     position: absolute;
-    right: -28px;
+    right: 0px;
     width: 20px;
     height: 14px;
     background-image: url("../img/burger.svg");

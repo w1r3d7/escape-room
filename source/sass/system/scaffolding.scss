@@ -53,7 +53,8 @@ a {
   letter-spacing: 0.03em;
   color: $white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $light-orange;
   }
 

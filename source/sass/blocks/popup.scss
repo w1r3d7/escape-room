@@ -190,6 +190,11 @@
 
 .popup__submit-btn:disabled {
   background-color: #b8b8b8;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .popup__wrapper-input {
@@ -256,6 +261,11 @@
 
   input:focus + label::before,
   input:hover + label::before {
+    opacity: 0.8;
+  }
+
+  input:focus:checked + label::before,
+  input:hover:checked + label::before {
     opacity: 0.8;
   }
 
